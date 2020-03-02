@@ -1,0 +1,50 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-color: $principal-blue;
+  clip-path: circle(80% at 10% 50%);
+  transition: clip-path 1s;
+}
+
+.name {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+
+  &__first {
+    color: $seconde-blue;
+    font-weight: 600;
+    line-height: 100px;
+    margin-bottom: 20px;
+    font-size: 96px;
+  }
+  &__last {
+    color: $tertiary-blue;
+    font-size: 64px;
+    font-weight: 500;
+  }
+  &__project {
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    color: $tertiary-blue;
+    cursor: pointer;
+    text-shadow: 1px 2px 3px $seconde-blue;
+    transition: transform 0.5s;
+  }
+  &__project:hover {
+    transform: translateX(50px);
+  }
+}
+.full {
+  clip-path: circle(100%);
+}
+
+.slide-project {
+  animation: slide-right 2s;
+}

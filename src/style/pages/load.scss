@@ -1,0 +1,9 @@
+.load {
+  .background-load {
+    width: 100vw;
+    height: 100vh;
+    background-color: $principal-blue;
+    clip-path: circle(80% at 10% 50%);
+    animation: load-animation 1.5s linear;
+  }
+}
