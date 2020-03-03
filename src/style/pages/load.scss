@@ -4,8 +4,11 @@
     height: 100vh;
     background-color: $principal-blue;
     clip-path: circle(80% at 10% 50%);
-    animation: load-animation 1.5s linear;
+    animation: load-animation-desktop 1.5s ease-out;
+    will-change: clip-path;
     @include mobile {
+      animation: load-animation-mobile 1.5s;
+      clip-path: circle(80% at 50% 10%);
     }
   }
 }

@@ -1,13 +1,56 @@
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  height: 90px;
+  @include mobile {
+    display: flex;
+    justify-content: center;
+  }
+
+  svg {
+    margin-left: 30px;
+    margin-top: 20px;
+    height: 40px;
+
+    cursor: pointer;
+    transition: fill 0.5s, transform 0.5s;
+    fill: white;
+    @include mobile {
+      margin-left: 0px;
+      margin-top: 20px;
+    }
+  }
+  svg:hover {
+    transform: translateY(-5px);
+  }
+
+  svg:hover:nth-child(1) {
+    fill: $github-color;
+  }
+
+  svg:hover:nth-child(2) {
+    fill: $twiter-color;
+  }
+  svg:hover:nth-child(3) {
+    fill: $insta-color;
+  }
+}
+
 .background {
   width: 100vw;
   height: 100vh;
   background-color: $principal-blue;
   clip-path: circle(80% at 10% 50%);
   transition: clip-path 1s;
+  @include mobile {
+    clip-path: circle(80% at 50% 10%);
+  }
 }
 
 .name {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,4 +90,8 @@
 
 .slide-project {
   animation: slide-right 2s;
+}
+
+.fill-blue {
+  background-color: $principal-blue;
 }
